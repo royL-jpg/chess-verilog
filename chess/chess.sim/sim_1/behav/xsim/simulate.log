@@ -1,0 +1,9 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+Testing White Rook at index 0...
+Test Finished for Piece  4 at Tile  0. Mask: 000000000001010e
+Testing White Knight at index 27...
+Test Finished for Piece  2 at Tile 27. Mask: 0000142200221400
+Testing White Pawn at index 8...
+Test Finished for Piece  1 at Tile  8. Mask: 0000000000000000
+$finish called at time : 4070 ns : File "D:/Backup/Uni/Notes/Y1S2/EE2026/vivado_projects/chess/chess.srcs/sim_1/new/tb_legal_move_fsm.v" Line 78

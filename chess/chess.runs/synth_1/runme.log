@@ -1,0 +1,1276 @@
+
+*** Running vivado
+    with args -log main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source main.tcl -notrace
+Command: synth_design -top main -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6148 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 357.648 ; gain = 100.570
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'main' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/main.v:3]
+	Parameter SYS_LOCKED bound to: 2'b00 
+	Parameter SYS_MENU bound to: 2'b01 
+	Parameter SYS_CLASSIC bound to: 2'b10 
+	Parameter SYS_BLITZ bound to: 2'b11 
+	Parameter PIECE_NONE bound to: 3'b000 
+	Parameter PIECE_PAWN bound to: 3'b001 
+	Parameter PIECE_KNIGHT bound to: 3'b010 
+	Parameter PIECE_BISHOP bound to: 3'b011 
+	Parameter PIECE_ROOK bound to: 3'b100 
+	Parameter PIECE_QUEEN bound to: 3'b101 
+	Parameter PIECE_KING bound to: 3'b110 
+	Parameter COLOR_WHITE bound to: 1'b0 
+	Parameter COLOR_BLACK bound to: 1'b1 
+	Parameter promo_queenArt bound to: 64'b0000000001010101010101010101010101010101011111110111111101111111 
+	Parameter promo_rookArt bound to: 64'b0000000001011010011111100011110000011000000110000011110001111110 
+	Parameter promo_bishopArt bound to: 64'b0000000000011000001111000011110000011000000110000011110011100111 
+	Parameter promo_knightArt bound to: 64'b0001100001111100111111101110111100000111000111110011111101111110 
+INFO: [Synth 8-6157] synthesizing module 'debounce_sw' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/debounce_sw.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/debounce_sw.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'debounce_sw' (1#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/debounce_sw.v:23]
+INFO: [Synth 8-6157] synthesizing module 'slow_clock' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/slow_clock.v:23]
+	Parameter MAX_COUNT bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'slow_clock' (2#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/slow_clock.v:23]
+INFO: [Synth 8-6157] synthesizing module 'screen_format' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/screen_format.v:5]
+	Parameter PIECE_NONE bound to: 3'b000 
+	Parameter PIECE_PAWN bound to: 3'b001 
+	Parameter PIECE_KNIGHT bound to: 3'b010 
+	Parameter PIECE_BISHOP bound to: 3'b011 
+	Parameter PIECE_ROOK bound to: 3'b100 
+	Parameter PIECE_QUEEN bound to: 3'b101 
+	Parameter PIECE_KING bound to: 3'b110 
+	Parameter COLOR_WHITE bound to: 0 - type: integer 
+	Parameter COLOR_BLACK bound to: 1 - type: integer 
+	Parameter pawnArt bound to: 64'b0000000000000000000000000000000000011000001111000111111001111110 
+	Parameter bishopArt bound to: 64'b0000000000011000001111000011110000011000000110000011110011100111 
+	Parameter knightArt bound to: 64'b0001100001111100111111101110111100000111000111110011111101111110 
+	Parameter queenArt bound to: 64'b0000000001010101010101010101010101010101011111110111111101111111 
+	Parameter kingArt bound to: 64'b0001100001111110000110000001100000111100011111100111111000111100 
+	Parameter rookArt bound to: 64'b0000000001011010011111100011110000011000000110000011110001111110 
+	Parameter zero bound to: 64'b0011110001100110011011100111011001100110011001100011110000000000 
+	Parameter one bound to: 64'b0001100000111000000110000001100000011000000110000011110000000000 
+	Parameter two bound to: 64'b0011110001100110000001100000110000011000001100000111111000000000 
+	Parameter three bound to: 64'b0011110001100110000001100001110000000110011001100011110000000000 
+	Parameter four bound to: 64'b0000110000011100001011000100110001111110000011000001111000000000 
+	Parameter five bound to: 64'b0111111001100000011111000000011000000110011001100011110000000000 
+	Parameter six bound to: 64'b0011110001100110011000000111110001100110011001100011110000000000 
+	Parameter seven bound to: 64'b0111111001100110000001100000110000011000000110000001100000000000 
+	Parameter eight bound to: 64'b0011110001100110011001100011110001100110011001100011110000000000 
+	Parameter RGB_OUTSIDE bound to: 0 - type: integer 
+	Parameter RGB_DARK_SQ bound to: 16'b0000000000000000 
+	Parameter RGB_LIGHT_SQ bound to: 16'b1111111111111111 
+	Parameter RGB_BLACK_PIECE bound to: 16'b1111100000000000 
+	Parameter RGB_WHITE_PIECE bound to: 16'b0000011111000000 
+	Parameter RGB_CURSOR bound to: 16'b1111111010000000 
+	Parameter RGB_SELECTED bound to: 16'b0000000000011111 
+	Parameter RGB_LEGAL bound to: 16'b0000010100000000 
+	Parameter RGB_CHECK bound to: 16'b1111110100100000 
+INFO: [Synth 8-6155] done synthesizing module 'screen_format' (3#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/screen_format.v:5]
+INFO: [Synth 8-6157] synthesizing module 'move_history_tracker' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/imports/new/move_history_tracker.v:23]
+WARNING: [Synth 8-5788] Register last_turn_reg in module move_history_tracker is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/imports/new/move_history_tracker.v:42]
+WARNING: [Synth 8-5788] Register latched_from_reg in module move_history_tracker is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/imports/new/move_history_tracker.v:48]
+WARNING: [Synth 8-5788] Register latched_to_reg in module move_history_tracker is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/imports/new/move_history_tracker.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'move_history_tracker' (4#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/imports/new/move_history_tracker.v:23]
+INFO: [Synth 8-6157] synthesizing module 'history_screen_format' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/imports/new/history_screen_format.v:23]
+	Parameter COLOR_BG bound to: 16'b0000000000000000 
+	Parameter COLOR_W_TXT bound to: 16'b1111111111111111 
+	Parameter COLOR_B_TXT bound to: 16'b0000011111111111 
+	Parameter COLOR_DIVIDER bound to: 16'b1000010000010000 
+INFO: [Synth 8-6155] done synthesizing module 'history_screen_format' (5#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/imports/new/history_screen_format.v:23]
+INFO: [Synth 8-6157] synthesizing module 'promo_manager' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/promo_manager.v:1]
+WARNING: [Synth 8-3848] Net safe_piece_sel in module/entity promo_manager does not have driver. [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/promo_manager.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'promo_manager' (6#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/promo_manager.v:1]
+INFO: [Synth 8-6157] synthesizing module 'blitz_timer' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/blitz_timer.v:3]
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+	Parameter START_TIME bound to: 9'b000011110 
+	Parameter INCREMENT bound to: 9'b000000011 
+WARNING: [Synth 8-5788] Register prev_turn_reg in module blitz_timer is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/blitz_timer.v:31]
+WARNING: [Synth 8-5788] Register prev_move_done_reg in module blitz_timer is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/blitz_timer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'blitz_timer' (7#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/blitz_timer.v:3]
+INFO: [Synth 8-6157] synthesizing module 'oled_a_blitz_ui' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/oled_a_blitz_ui.v:4]
+	Parameter COLOR_GREEN bound to: 16'b0000011111100000 
+	Parameter COLOR_ORANGE bound to: 16'b1111110100100000 
+	Parameter COLOR_GREY bound to: 16'b0100001000001000 
+	Parameter COLOR_BG bound to: 16'b0000100000100001 
+	Parameter COLOR_YELLOW bound to: 16'b1111111111100000 
+	Parameter COLOR_WHITE bound to: 16'b1111111111111111 
+	Parameter COLOR_RED bound to: 16'b1111100000000000 
+INFO: [Synth 8-6155] done synthesizing module 'oled_a_blitz_ui' (8#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/oled_a_blitz_ui.v:4]
+INFO: [Synth 8-6157] synthesizing module 'TaskB' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/TaskB.v:77]
+INFO: [Synth 8-6155] done synthesizing module 'TaskB' (9#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/TaskB.v:77]
+WARNING: [Synth 8-689] width (8) of port connection 'seg' does not match port width (7) of module 'TaskB' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/main.v:429]
+INFO: [Synth 8-6157] synthesizing module 'instruction_box' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/instruction_box.v:73]
+	Parameter INVERT bound to: 1 - type: integer 
+	Parameter YELLOW bound to: 16'b1111111111100000 
+	Parameter WHITE bound to: 16'b1111111111111111 
+	Parameter BLACK bound to: 16'b0000000000000000 
+	Parameter GREY bound to: 16'b0010000100000100 
+INFO: [Synth 8-6155] done synthesizing module 'instruction_box' (10#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/instruction_box.v:73]
+INFO: [Synth 8-6157] synthesizing module 'instruction_box__parameterized0' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/instruction_box.v:73]
+	Parameter INVERT bound to: 0 - type: integer 
+	Parameter YELLOW bound to: 16'b1111111111100000 
+	Parameter WHITE bound to: 16'b1111111111111111 
+	Parameter BLACK bound to: 16'b0000000000000000 
+	Parameter GREY bound to: 16'b0010000100000100 
+INFO: [Synth 8-6155] done synthesizing module 'instruction_box__parameterized0' (10#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/instruction_box.v:73]
+INFO: [Synth 8-6157] synthesizing module 'menu_screen' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/menu_screen.v:95]
+	Parameter COLOR_WHITE bound to: 16'b1111111111111111 
+	Parameter COLOR_GREEN bound to: 16'b0000011111100000 
+	Parameter COLOR_DARK bound to: 16'b0000000000000000 
+	Parameter COLOR_GREY bound to: 16'b0010000100000100 
+INFO: [Synth 8-6155] done synthesizing module 'menu_screen' (11#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/menu_screen.v:95]
+INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/Oled_Display.v:36]
+	Parameter Width bound to: 96 - type: integer 
+	Parameter Height bound to: 64 - type: integer 
+	Parameter PixelCount bound to: 6144 - type: integer 
+	Parameter PixelCountWidth bound to: 13 - type: integer 
+	Parameter ClkFreq bound to: 6250000 - type: integer 
+	Parameter FrameFreq bound to: 60 - type: integer 
+	Parameter FrameDiv bound to: 104166 - type: integer 
+	Parameter FrameDivWidth bound to: 17 - type: integer 
+	Parameter PowerDelay bound to: 20 - type: integer 
+	Parameter ResetDelay bound to: 3 - type: integer 
+	Parameter VccEnDelay bound to: 20 - type: integer 
+	Parameter StartupCompleteDelay bound to: 100 - type: integer 
+	Parameter MaxDelay bound to: 100 - type: integer 
+	Parameter MaxDelayCount bound to: 625000 - type: integer 
+	Parameter StateCount bound to: 32 - type: integer 
+	Parameter StateWidth bound to: 5 - type: integer 
+	Parameter PowerUp bound to: 5'b00000 
+	Parameter Reset bound to: 5'b00001 
+	Parameter ReleaseReset bound to: 5'b00011 
+	Parameter EnableDriver bound to: 5'b00010 
+	Parameter DisplayOff bound to: 5'b00110 
+	Parameter SetRemapDisplayFormat bound to: 5'b00111 
+	Parameter SetStartLine bound to: 5'b00101 
+	Parameter SetOffset bound to: 5'b00100 
+	Parameter SetNormalDisplay bound to: 5'b01100 
+	Parameter SetMultiplexRatio bound to: 5'b01101 
+	Parameter SetMasterConfiguration bound to: 5'b01111 
+	Parameter DisablePowerSave bound to: 5'b01110 
+	Parameter SetPhaseAdjust bound to: 5'b01010 
+	Parameter SetDisplayClock bound to: 5'b01011 
+	Parameter SetSecondPrechargeA bound to: 5'b01001 
+	Parameter SetSecondPrechargeB bound to: 5'b01000 
+	Parameter SetSecondPrechargeC bound to: 5'b11000 
+	Parameter SetPrechargeLevel bound to: 5'b11001 
+	Parameter SetVCOMH bound to: 5'b11011 
+	Parameter SetMasterCurrent bound to: 5'b11010 
+	Parameter SetContrastA bound to: 5'b11110 
+	Parameter SetContrastB bound to: 5'b11111 
+	Parameter SetContrastC bound to: 5'b11101 
+	Parameter DisableScrolling bound to: 5'b11100 
+	Parameter ClearScreen bound to: 5'b10100 
+	Parameter VccEn bound to: 5'b10101 
+	Parameter DisplayOn bound to: 5'b10111 
+	Parameter PrepareNextFrame bound to: 5'b10110 
+	Parameter SetColAddress bound to: 5'b10010 
+	Parameter SetRowAddress bound to: 5'b10011 
+	Parameter WaitNextFrame bound to: 5'b10001 
+	Parameter SendPixel bound to: 5'b10000 
+	Parameter SpiCommandMaxWidth bound to: 40 - type: integer 
+	Parameter SpiCommandBitCountWidth bound to: 6 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/Oled_Display.v:123]
+INFO: [Synth 8-226] default block is never used [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/Oled_Display.v:198]
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/Oled_Display.v:346]
+INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (12#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/Oled_Display.v:36]
+WARNING: [Synth 8-350] instance 'oled1' of module 'Oled_Display' requires 14 connections, but only 12 given [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/main.v:479]
+WARNING: [Synth 8-350] instance 'oled2' of module 'Oled_Display' requires 14 connections, but only 12 given [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/main.v:485]
+INFO: [Synth 8-6157] synthesizing module 'scoreboard' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/scoreboard.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'scoreboard' (13#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/scoreboard.v:23]
+INFO: [Synth 8-6157] synthesizing module 'cursor' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/cursor.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce_btn' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/debounce_btn.v:1]
+	Parameter INITIAL_LOCKOUT bound to: 20000000 - type: integer 
+	Parameter REPEAT_DELAY bound to: 60000000 - type: integer 
+	Parameter HELD_DELAY bound to: 20000000 - type: integer 
+	Parameter RELEASE_WINDOW bound to: 2000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debounce_btn' (14#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/debounce_btn.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'cursor' (15#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/cursor.v:23]
+INFO: [Synth 8-6157] synthesizing module 'seg7' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/seg7.v:3]
+INFO: [Synth 8-6157] synthesizing module 'slow_clock__parameterized0' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/slow_clock.v:23]
+	Parameter MAX_COUNT bound to: 100000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'slow_clock__parameterized0' (15#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/slow_clock.v:23]
+INFO: [Synth 8-6157] synthesizing module 'timer' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/timer.v:91]
+INFO: [Synth 8-6157] synthesizing module 'slow_clock__parameterized1' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/slow_clock.v:23]
+	Parameter MAX_COUNT bound to: 500000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'slow_clock__parameterized1' (15#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/slow_clock.v:23]
+WARNING: [Synth 8-5788] Register hundreth_reg in module timer is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/timer.v:104]
+WARNING: [Synth 8-5788] Register tenth_reg in module timer is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/timer.v:105]
+WARNING: [Synth 8-5788] Register second2_reg in module timer is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/timer.v:107]
+WARNING: [Synth 8-5788] Register second1_reg in module timer is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/timer.v:108]
+WARNING: [Synth 8-5788] Register prev_set_reg in module timer is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/timer.v:110]
+WARNING: [Synth 8-5788] Register prev_turn_reg in module timer is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/timer.v:110]
+INFO: [Synth 8-6155] done synthesizing module 'timer' (16#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/timer.v:91]
+INFO: [Synth 8-6157] synthesizing module 'decoder_7seg' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/decoder_7seg.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_7seg' (17#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/decoder_7seg.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'seg7' (18#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/seg7.v:3]
+INFO: [Synth 8-6157] synthesizing module 'game_logic' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/game_logic.v:4]
+	Parameter PIECE_NONE bound to: 3'b000 
+	Parameter PIECE_PAWN bound to: 3'b001 
+	Parameter PIECE_KNIGHT bound to: 3'b010 
+	Parameter PIECE_BISHOP bound to: 3'b011 
+	Parameter PIECE_ROOK bound to: 3'b100 
+	Parameter PIECE_QUEEN bound to: 3'b101 
+	Parameter PIECE_KING bound to: 3'b110 
+	Parameter WAIT bound to: 3'b000 
+	Parameter MOVE bound to: 3'b001 
+	Parameter ERASE bound to: 3'b010 
+	Parameter CHECK bound to: 3'b011 
+	Parameter PASS bound to: 3'b100 
+	Parameter ROOKPLACE bound to: 3'b101 
+	Parameter ROOKERASE bound to: 3'b110 
+	Parameter PROMOTE bound to: 3'b111 
+INFO: [Synth 8-6157] synthesizing module 'legal_move_fsm' [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/legal_move_fsm.v:22]
+	Parameter PIECE_NONE bound to: 3'b000 
+	Parameter PIECE_PAWN bound to: 3'b001 
+	Parameter PIECE_KNIGHT bound to: 3'b010 
+	Parameter PIECE_BISHOP bound to: 3'b011 
+	Parameter PIECE_ROOK bound to: 3'b100 
+	Parameter PIECE_QUEEN bound to: 3'b101 
+	Parameter PIECE_KING bound to: 3'b110 
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter CLEAR_CHECK bound to: 1 - type: integer 
+	Parameter CHECKING bound to: 2 - type: integer 
+	Parameter FINISH bound to: 3 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/legal_move_fsm.v:99]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/legal_move_fsm.v:75]
+WARNING: [Synth 8-6014] Unused sequential element move_possible_reg was removed.  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/legal_move_fsm.v:90]
+WARNING: [Synth 8-6014] Unused sequential element path_blocked_reg was removed.  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/legal_move_fsm.v:91]
+WARNING: [Synth 8-6014] Unused sequential element target_p_reg was removed.  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/legal_move_fsm.v:92]
+WARNING: [Synth 8-6014] Unused sequential element is_rook_move_reg was removed.  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/legal_move_fsm.v:165]
+WARNING: [Synth 8-6014] Unused sequential element is_bish_move_reg was removed.  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/legal_move_fsm.v:166]
+WARNING: [Synth 8-6014] Unused sequential element step_x_reg was removed.  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/legal_move_fsm.v:173]
+WARNING: [Synth 8-6014] Unused sequential element step_y_reg was removed.  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/legal_move_fsm.v:174]
+WARNING: [Synth 8-6014] Unused sequential element dist_reg was removed.  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/legal_move_fsm.v:175]
+WARNING: [Synth 8-6014] Unused sequential element temp_x_reg was removed.  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/legal_move_fsm.v:180]
+WARNING: [Synth 8-6014] Unused sequential element temp_y_reg was removed.  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/legal_move_fsm.v:181]
+WARNING: [Synth 8-5788] Register legal_mask_reg in module legal_move_fsm is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/legal_move_fsm.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'legal_move_fsm' (19#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/legal_move_fsm.v:22]
+INFO: [Synth 8-226] default block is never used [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/game_logic.v:172]
+WARNING: [Synth 8-6014] Unused sequential element loser_reg was removed.  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/game_logic.v:194]
+WARNING: [Synth 8-5788] Register capturing_reg in module game_logic is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/game_logic.v:167]
+WARNING: [Synth 8-5788] Register selected_p_reg in module game_logic is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/game_logic.v:108]
+WARNING: [Synth 8-5788] Register start_reg in module game_logic is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/game_logic.v:107]
+WARNING: [Synth 8-5788] Register castle_pending_reg in module game_logic is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/game_logic.v:225]
+WARNING: [Synth 8-5788] Register castle_rook_from_reg in module game_logic is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/game_logic.v:228]
+WARNING: [Synth 8-5788] Register castle_rook_to_reg in module game_logic is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/game_logic.v:229]
+WARNING: [Synth 8-5788] Register track_reg in module game_logic is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/game_logic.v:245]
+WARNING: [Synth 8-5788] Register white_blitz_count_reg in module game_logic is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/game_logic.v:93]
+WARNING: [Synth 8-5788] Register black_blitz_count_reg in module game_logic is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/game_logic.v:93]
+INFO: [Synth 8-6155] done synthesizing module 'game_logic' (20#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/game_logic.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'main' (21#1) [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/sources_1/new/main.v:3]
+WARNING: [Synth 8-3917] design main has port led[14] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[13] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[12] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[11] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[10] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[9] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[8] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[7] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[6] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[5] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[4] driven by constant 0
+WARNING: [Synth 8-3331] design game_logic has unconnected port sys_state[1]
+WARNING: [Synth 8-3331] design game_logic has unconnected port sys_state[0]
+WARNING: [Synth 8-3331] design menu_screen has unconnected port clk
+WARNING: [Synth 8-3331] design menu_screen has unconnected port reset
+WARNING: [Synth 8-3331] design menu_screen has unconnected port sys_state[2]
+WARNING: [Synth 8-3331] design menu_screen has unconnected port sys_state[1]
+WARNING: [Synth 8-3331] design menu_screen has unconnected port sys_state[0]
+WARNING: [Synth 8-3331] design menu_screen has unconnected port seq_progress[2]
+WARNING: [Synth 8-3331] design menu_screen has unconnected port seq_progress[1]
+WARNING: [Synth 8-3331] design menu_screen has unconnected port seq_progress[0]
+WARNING: [Synth 8-3331] design TaskB has unconnected port btnl
+WARNING: [Synth 8-3331] design TaskB has unconnected port btnr
+WARNING: [Synth 8-3331] design TaskB has unconnected port btnu
+WARNING: [Synth 8-3331] design TaskB has unconnected port btnd
+WARNING: [Synth 8-3331] design promo_manager has unconnected port safe_piece_sel[1]
+WARNING: [Synth 8-3331] design promo_manager has unconnected port safe_piece_sel[0]
+WARNING: [Synth 8-3331] design promo_manager has unconnected port is_blitz_mode
+WARNING: [Synth 8-3331] design promo_manager has unconnected port raw_btn_sel[1]
+WARNING: [Synth 8-3331] design promo_manager has unconnected port raw_btn_sel[0]
+WARNING: [Synth 8-3331] design move_history_tracker has unconnected port board_change_contents[3]
+WARNING: [Synth 8-3331] design main has unconnected port JB[2]
+WARNING: [Synth 8-3331] design main has unconnected port JA[2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 440.980 ; gain = 183.902
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 440.980 ; gain = 183.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 440.980 ; gain = 183.902
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/constrs_1/new/constraint.xdc]
+Finished Parsing XDC File [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/constrs_1/new/constraint.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.srcs/constrs_1/new/constraint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 793.941 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 793.941 ; gain = 536.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 793.941 ; gain = 536.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 793.941 ; gain = 536.863
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'debounce_sw'
+INFO: [Synth 8-5544] ROM "curr_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "score_piece_type" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "score_piece_type" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "score_enable" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "score_enable" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'TaskB'
+INFO: [Synth 8-5544] ROM "an" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "fsm_next_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "white_pawn_lost" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "white_knight_lost" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "white_bishop_lost" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "white_rook_lost" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "white_queen_lost" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "black_pawn_lost" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "black_knight_lost" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "black_bishop_lost" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "black_rook_lost" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "black_queen_lost" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'debounce_btn'
+INFO: [Synth 8-5544] ROM "curr_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "tenth0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "seg_r0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "current_tile" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'game_logic'
+INFO: [Synth 8-5544] ROM "game_over" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "white_king_moved" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "black_king_moved" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "white_rook_left_moved" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "white_rook_right_moved" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "black_rook_left_moved" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "black_rook_right_moved" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "game_over" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "white_king_moved" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "black_king_moved" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "white_rook_left_moved" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "white_rook_right_moved" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "black_rook_left_moved" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "black_rook_right_moved" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "castle_rook_to" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "castle_rook_from" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'sys_state_reg' in module 'main'
+INFO: [Synth 8-5546] ROM "board_reg[63]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[62]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[61]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[60]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[59]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[58]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[57]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[56]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[55]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[54]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[53]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[52]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[51]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[50]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[49]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[48]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[47]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[46]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[45]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[44]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[43]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[42]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[41]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[40]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[39]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[38]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[37]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[36]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[35]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[34]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[33]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[32]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "board_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clean_btnC" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "sys_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                               00 |                              000
+                  iSTATE |                               01 |                              001
+                 iSTATE2 |                               10 |                              010
+                 iSTATE0 |                               11 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'curr_state_reg' using encoding 'sequential' in module 'debounce_sw'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                                0 |                              000
+                 iSTATE0 |                                1 |                              001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'TaskB'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 PowerUp | 00000000100000000000000000000000 |                            00000
+                   Reset | 00000000000100000000000000000000 |                            00001
+            ReleaseReset | 00000000000000000000100000000000 |                            00011
+            EnableDriver | 00000000000000000001000000000000 |                            00010
+              DisplayOff | 00000000000000000100000000000000 |                            00110
+   SetRemapDisplayFormat | 00000100000000000000000000000000 |                            00111
+            SetStartLine | 00001000000000000000000000000000 |                            00101
+               SetOffset | 10000000000000000000000000000000 |                            00100
+        SetNormalDisplay | 00000000000000000000000010000000 |                            01100
+       SetMultiplexRatio | 00000000000000000000000000100000 |                            01101
+  SetMasterConfiguration | 00000000000000000000000001000000 |                            01111
+        DisablePowerSave | 00000000000000000000000000000100 |                            01110
+          SetPhaseAdjust | 00000000000000000000000000001000 |                            01010
+         SetDisplayClock | 00000000001000000000000000000000 |                            01011
+     SetSecondPrechargeA | 00000000010000000000000000000000 |                            01001
+     SetSecondPrechargeB | 01000000000000000000000000000000 |                            01000
+     SetSecondPrechargeC | 00000010000000000000000000000000 |                            11000
+       SetPrechargeLevel | 00000001000000000000000000000000 |                            11001
+                SetVCOMH | 00000000000000010000000000000000 |                            11011
+        SetMasterCurrent | 00000000000000100000000000000000 |                            11010
+            SetContrastA | 00000000000001000000000000000000 |                            11110
+            SetContrastB | 00100000000000000000000000000000 |                            11111
+            SetContrastC | 00000000000000000000000000000001 |                            11101
+        DisableScrolling | 00000000000000000000000000000010 |                            11100
+             ClearScreen | 00000000000000000000000000010000 |                            10100
+                   VccEn | 00010000000000000000000000000000 |                            10101
+               DisplayOn | 00000000000010000000000000000000 |                            10111
+        PrepareNextFrame | 00000000000000001000000000000000 |                            10110
+           SetColAddress | 00000000000000000000010000000000 |                            10010
+           SetRowAddress | 00000000000000000000000100000000 |                            10011
+           WaitNextFrame | 00000000000000000000001000000000 |                            10001
+               SendPixel | 00000000000000000010000000000000 |                            10000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Oled_Display'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                               00 |                              000
+                  iSTATE |                               01 |                              001
+                 iSTATE2 |                               10 |                              010
+                 iSTATE0 |                               11 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'curr_state_reg' using encoding 'sequential' in module 'debounce_btn'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    WAIT |                              000 |                              000
+                    MOVE |                              001 |                              001
+                   ERASE |                              010 |                              010
+               ROOKPLACE |                              011 |                              101
+               ROOKERASE |                              100 |                              110
+                   CHECK |                              101 |                              011
+                 PROMOTE |                              110 |                              111
+                    PASS |                              111 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'game_logic'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              SYS_LOCKED |                             0001 |                               00
+                SYS_MENU |                             0010 |                               01
+             SYS_CLASSIC |                             0100 |                               10
+               SYS_BLITZ |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sys_state_reg' using encoding 'one-hot' in module 'main'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 793.941 ; gain = 536.863
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 18    
+	   2 Input     27 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 6     
+	   3 Input      7 Bit       Adders := 1     
+	   3 Input      6 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 7     
+	   2 Input      5 Bit       Adders := 1     
+	   3 Input      4 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 16    
+	   2 Input      3 Bit       Adders := 1     
+	   3 Input      3 Bit       Adders := 4     
+	   2 Input      2 Bit       Adders := 6     
++---XORs : 
+	   2 Input      1 Bit         XORs := 5     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               40 Bit    Registers := 2     
+	               32 Bit    Registers := 13    
+	               27 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	               17 Bit    Registers := 2     
+	               12 Bit    Registers := 6     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 8     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 11    
+	                4 Bit    Registers := 83    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 54    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   4 Input     64 Bit        Muxes := 2     
+	   2 Input     40 Bit        Muxes := 6     
+	   4 Input     32 Bit        Muxes := 10    
+	   2 Input     32 Bit        Muxes := 43    
+	  32 Input     32 Bit        Muxes := 2     
+	   2 Input     27 Bit        Muxes := 3     
+	  32 Input     20 Bit        Muxes := 2     
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 26    
+	   6 Input     16 Bit        Muxes := 2     
+	   3 Input     16 Bit        Muxes := 9     
+	   4 Input     16 Bit        Muxes := 1     
+	   7 Input     16 Bit        Muxes := 2     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 5     
+	   2 Input      9 Bit        Muxes := 7     
+	   4 Input      8 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 5     
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 15    
+	   3 Input      6 Bit        Muxes := 1     
+	  32 Input      6 Bit        Muxes := 2     
+	   4 Input      6 Bit        Muxes := 1     
+	   8 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 7     
+	  32 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 23    
+	   3 Input      4 Bit        Muxes := 3     
+	   4 Input      4 Bit        Muxes := 3     
+	   8 Input      4 Bit        Muxes := 1     
+	  13 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 16    
+	   4 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 11    
+	   2 Input      2 Bit        Muxes := 19    
+	   8 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 213   
+	   4 Input      1 Bit        Muxes := 34    
+	   6 Input      1 Bit        Muxes := 4     
+	  10 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 31    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module main 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
+	                4 Bit    Registers := 64    
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input     20 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 4     
+	   3 Input     16 Bit        Muxes := 3     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 66    
+	   3 Input      1 Bit        Muxes := 2     
+Module debounce_sw 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+Module slow_clock 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module screen_format 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 16    
+	   6 Input     16 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	  13 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 2     
+	  10 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+Module move_history_tracker 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 5     
+Module history_screen_format 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   3 Input      7 Bit       Adders := 1     
+	   3 Input      6 Bit       Adders := 1     
+	   3 Input      4 Bit       Adders := 1     
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 5     
+	   2 Input      6 Bit        Muxes := 1     
+	   3 Input      6 Bit        Muxes := 1     
+Module promo_manager 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module blitz_timer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     27 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 4     
++---Registers : 
+	               27 Bit    Registers := 1     
+	                9 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     27 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 7     
+Module oled_a_blitz_ui 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 5     
+	   3 Input     16 Bit        Muxes := 3     
+	   6 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
+Module TaskB 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module instruction_box 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   7 Input     16 Bit        Muxes := 1     
+Module instruction_box__parameterized0 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   7 Input     16 Bit        Muxes := 1     
+Module menu_screen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 1     
+Module Oled_Display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     40 Bit        Muxes := 3     
+	  32 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	  32 Input     20 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	  32 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	  32 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module scoreboard 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 10    
++---Registers : 
+	                4 Bit    Registers := 10    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 10    
+Module debounce_btn 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 3     
+Module cursor 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 2     
++---Registers : 
+	                6 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+Module slow_clock__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module slow_clock__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module timer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 4     
++---Registers : 
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 12    
+	   3 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 11    
+Module decoder_7seg 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module seg7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+Module legal_move_fsm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
+	   3 Input      3 Bit       Adders := 4     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 4     
+	   4 Input     64 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 1     
+	   4 Input      6 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	   4 Input      3 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 26    
+	   4 Input      1 Bit        Muxes := 3     
+Module game_logic 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	                6 Bit    Registers := 4     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 4     
+	   8 Input      6 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 3     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 10    
+	   8 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 8     
+	   8 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 52    
+	   3 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 31    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "clk2/count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk2/slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "timer1/clock1/count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "timer1/clock1/slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "seg_r0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "clk1/count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clk1/slow_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "clean_btnC" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design main has port led[14] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[13] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[12] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[11] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[10] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[9] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[8] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[7] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[6] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[5] driven by constant 0
+WARNING: [Synth 8-3917] design main has port led[4] driven by constant 0
+WARNING: [Synth 8-3331] design game_logic has unconnected port sys_state[1]
+WARNING: [Synth 8-3331] design game_logic has unconnected port sys_state[0]
+WARNING: [Synth 8-3331] design cursor has unconnected port sys_state[0]
+WARNING: [Synth 8-3331] design menu_screen has unconnected port clk
+WARNING: [Synth 8-3331] design menu_screen has unconnected port reset
+WARNING: [Synth 8-3331] design menu_screen has unconnected port sys_state[2]
+WARNING: [Synth 8-3331] design menu_screen has unconnected port sys_state[1]
+WARNING: [Synth 8-3331] design menu_screen has unconnected port sys_state[0]
+WARNING: [Synth 8-3331] design menu_screen has unconnected port seq_progress[2]
+WARNING: [Synth 8-3331] design menu_screen has unconnected port seq_progress[1]
+WARNING: [Synth 8-3331] design menu_screen has unconnected port seq_progress[0]
+WARNING: [Synth 8-3331] design main has unconnected port JB[2]
+WARNING: [Synth 8-3331] design main has unconnected port JA[2]
+INFO: [Synth 8-3886] merging instance 'logic_module/castle_rook_from_reg[0]' (FDE) to 'logic_module/castle_rook_from_reg[2]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (logic_module/\castle_rook_to_reg[0] )
+INFO: [Synth 8-3886] merging instance 'logic_module/castle_rook_from_reg[1]' (FDE) to 'logic_module/castle_rook_from_reg[2]'
+INFO: [Synth 8-3886] merging instance 'logic_module/castle_rook_from_reg[3]' (FDE) to 'logic_module/castle_rook_from_reg[5]'
+INFO: [Synth 8-3886] merging instance 'logic_module/castle_rook_to_reg[3]' (FDE) to 'logic_module/castle_rook_to_reg[4]'
+INFO: [Synth 8-3886] merging instance 'logic_module/castle_rook_from_reg[5]' (FDE) to 'logic_module/castle_rook_from_reg[4]'
+INFO: [Synth 8-3886] merging instance 'logic_module/castle_rook_to_reg[5]' (FDE) to 'logic_module/castle_rook_to_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (logic_module/legal_fsm/\state_reg[2] )
+INFO: [Synth 8-3886] merging instance 'seven_seg_module/db2/seg_reg[7]' (FD) to 'seven_seg_module/d4/seg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'seven_seg_module/db3/seg_reg[7]' (FD) to 'seven_seg_module/d4/seg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'seven_seg_module/d4/seg_reg[7]' (FD) to 'seven_seg_module/d2/seg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'seven_seg_module/d3/seg_reg[7]' (FD) to 'seven_seg_module/d2/seg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'seven_seg_module/d2/seg_reg[7]' (FD) to 'seven_seg_module/d1/seg_reg[7]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (seven_seg_module/\d1/seg_reg[7] )
+INFO: [Synth 8-3886] merging instance 'lock_ctrl/an_reg[0]' (FD) to 'lock_ctrl/seg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'lock_ctrl/an_reg[1]' (FD) to 'lock_ctrl/an_reg[2]'
+INFO: [Synth 8-3886] merging instance 'lock_ctrl/an_reg[2]' (FD) to 'lock_ctrl/an_reg[3]'
+INFO: [Synth 8-3886] merging instance 'lock_ctrl/an_reg[3]' (FD) to 'lock_ctrl/seg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'lock_ctrl/seg_reg[0]' (FD) to 'lock_ctrl/seg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'lock_ctrl/seg_reg[1]' (FD) to 'lock_ctrl/seg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'lock_ctrl/seg_reg[2]' (FD) to 'lock_ctrl/seg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'lock_ctrl/seg_reg[3]' (FD) to 'lock_ctrl/seg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'lock_ctrl/seg_reg[4]' (FD) to 'lock_ctrl/seg_reg[6]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\lock_ctrl/seg_reg[5] )
+WARNING: [Synth 8-3332] Sequential element (db1/seg_reg[7]) is unused and will be removed from module seg7.
+WARNING: [Synth 8-3332] Sequential element (d1/seg_reg[7]) is unused and will be removed from module seg7.
+WARNING: [Synth 8-3332] Sequential element (state_reg[2]) is unused and will be removed from module legal_move_fsm.
+WARNING: [Synth 8-3332] Sequential element (castle_rook_to_reg[0]) is unused and will be removed from module game_logic.
+WARNING: [Synth 8-3332] Sequential element (btnL_prev_reg) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (btnR_prev_reg) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (lock_ctrl/seg_reg[5]) is unused and will be removed from module main.
+INFO: [Synth 8-3886] merging instance 'logic_module/castle_rook_from_reg[2]' (FDE) to 'logic_module/castle_rook_to_reg[2]'
+INFO: [Synth 8-3886] merging instance 'logic_module/castle_rook_from_reg[4]' (FDE) to 'logic_module/castle_rook_to_reg[4]'
+INFO: [Synth 8-3886] merging instance 'seven_seg_module/db2/seg_reg[0]' (FD) to 'seven_seg_module/db2/seg_reg[3]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:27 . Memory (MB): peak = 793.941 ; gain = 536.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++----------------------+------------+---------------+----------------+
+|Module Name           | RTL Object | Depth x Width | Implemented As | 
++----------------------+------------+---------------+----------------+
+|history_screen_format | bmp        | 32x15         | LUT            | 
+|history_screen_format | bmp        | 32x15         | LUT            | 
++----------------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:31 ; elapsed = 00:01:39 . Memory (MB): peak = 793.941 ; gain = 536.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:42 ; elapsed = 00:01:50 . Memory (MB): peak = 870.883 ; gain = 613.805
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:45 ; elapsed = 00:01:53 . Memory (MB): peak = 968.867 ; gain = 711.789
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:46 ; elapsed = 00:01:54 . Memory (MB): peak = 968.867 ; gain = 711.789
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:46 ; elapsed = 00:01:54 . Memory (MB): peak = 968.867 ; gain = 711.789
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:46 ; elapsed = 00:01:54 . Memory (MB): peak = 968.867 ; gain = 711.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:46 ; elapsed = 00:01:54 . Memory (MB): peak = 968.867 ; gain = 711.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:46 ; elapsed = 00:01:54 . Memory (MB): peak = 968.867 ; gain = 711.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:46 ; elapsed = 00:01:54 . Memory (MB): peak = 968.867 ; gain = 711.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |   271|
+|3     |LUT1   |   345|
+|4     |LUT2   |   641|
+|5     |LUT3   |   290|
+|6     |LUT4   |   348|
+|7     |LUT5   |   620|
+|8     |LUT6   |  1726|
+|9     |MUXF7  |   135|
+|10    |MUXF8  |    43|
+|11    |FDCE   |   405|
+|12    |FDE_1  |    64|
+|13    |FDPE   |    72|
+|14    |FDRE   |   845|
+|15    |FDSE   |    24|
+|16    |LDC    |     2|
+|17    |IBUF   |    11|
+|18    |OBUF   |    42|
+|19    |OBUFT  |     2|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------+---------------------------+------+
+|      |Instance            |Module                     |Cells |
++------+--------------------+---------------------------+------+
+|1     |top                 |                           |  5888|
+|2     |  clk1              |slow_clock                 |    54|
+|3     |  cursor_controller |cursor                     |   745|
+|4     |    b1              |debounce_btn_11            |   159|
+|5     |    b2              |debounce_btn_12            |   148|
+|6     |    b3              |debounce_btn_13            |   149|
+|7     |    b4              |debounce_btn_14            |   148|
+|8     |  lock_ctrl         |TaskB                      |    11|
+|9     |  logic_module      |game_logic                 |  1933|
+|10    |    bC              |debounce_btn               |   176|
+|11    |    bD              |debounce_btn_7             |   149|
+|12    |    bL              |debounce_btn_8             |   149|
+|13    |    bR              |debounce_btn_9             |   146|
+|14    |    bU              |debounce_btn_10            |   149|
+|15    |    legal_fsm       |legal_move_fsm             |   943|
+|16    |  oled1             |Oled_Display               |   955|
+|17    |  oled2             |Oled_Display_0             |   808|
+|18    |  promo_limit_inst  |promo_manager              |    11|
+|19    |  sb                |scoreboard                 |    96|
+|20    |  seven_seg_module  |seg7                       |   328|
+|21    |    clk2            |slow_clock__parameterized0 |    52|
+|22    |    d1              |decoder_7seg               |     7|
+|23    |    d2              |decoder_7seg_1             |     9|
+|24    |    d3              |decoder_7seg_2             |    11|
+|25    |    d4              |decoder_7seg_3             |    12|
+|26    |    db1             |decoder_7seg_4             |    11|
+|27    |    db2             |decoder_7seg_5             |    18|
+|28    |    db3             |decoder_7seg_6             |    21|
+|29    |    timer1          |timer                      |   143|
+|30    |      clock1        |slow_clock__parameterized1 |    53|
+|31    |  sw1               |debounce_sw                |   135|
+|32    |  timer_inst        |blitz_timer                |   257|
+|33    |  tracker_inst      |move_history_tracker       |   122|
++------+--------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:46 ; elapsed = 00:01:54 . Memory (MB): peak = 968.867 ; gain = 711.789
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 31 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:25 ; elapsed = 00:01:39 . Memory (MB): peak = 968.867 ; gain = 358.828
+Synthesis Optimization Complete : Time (s): cpu = 00:01:46 ; elapsed = 00:01:54 . Memory (MB): peak = 968.867 ; gain = 711.789
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 526 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 66 instances were transformed.
+  FDE_1 => FDRE (inverted pins: C): 64 instances
+  LDC => LDCE: 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+238 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:48 ; elapsed = 00:01:58 . Memory (MB): peak = 968.867 ; gain = 724.645
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/kokho/Downloads/chess_Finalz.xpr/chess/chess.runs/synth_1/main.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 968.867 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 10 10:40:10 2026...

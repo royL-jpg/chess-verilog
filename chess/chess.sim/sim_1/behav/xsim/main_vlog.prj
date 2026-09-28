@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../chess.srcs/sources_1/new/Oled_Display.v" \
+"../../../../chess.srcs/sources_1/new/cursor.v" \
+"../../../../chess.srcs/sources_1/new/debounce_btn.v" \
+"../../../../chess.srcs/sources_1/new/game_logic.v" \
+"../../../../chess.srcs/sources_1/new/screen_format.v" \
+"../../../../chess.srcs/sources_1/new/slow_clock.v" \
+"../../../../chess.srcs/sources_1/new/main.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
